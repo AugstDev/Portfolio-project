@@ -1,0 +1,29 @@
+<div class="maincontent">
+        <div class="maintext">
+            <h1>Igor is a <span class="mark">nice guy</span> and
+                <br><span class="mark">back-end developer</span></h1>
+                <p>He crafts responsive websites where technologies meet creativity</p>
+                <button>Contact me !!</button>
+            </div>
+    </div>
+
+
+
+    .maincontent {
+    color: var(--whitecolor);
+    margin-top: 60px;
+
+    & .mark {
+        color: var(--primarycolor);
+    }
+
+    & .maintext {
+        
+        & button {
+            background: none;
+            border: var(--primarycolor) 1px solid;
+            padding: 5px 10px;
+            color: var(--whitecolor);
+        }
+    }
+}

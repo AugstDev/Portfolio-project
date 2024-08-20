@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root{
+    --backgroundcolor: #282C33;
+    --textcolor: #ABB2BF;
+    --primarycolor: #C778DD;
+    --whitecolor: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--backgroundcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header {
+
+    font-family: "Fira Code", monospace;
+    background-color: var(--backgroundcolor);
+    display: inline-flex;
+    width: 1000px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    justify-content: space-between;
+
+    & .pfp {
+        color: var(--whitecolor);
+        font-size: 1rem;
+        font-weight:bold;
+    }
+
+    & .tag {
+        color: var(--primarycolor);
+    }
+
+    & .content {
+        display: inline-flex;
+
+        & a, details {
+            margin-right: 40px;
+            text-decoration: none;
+            color: var(--textcolor);
+        }
+    }
+}
+
+.lang {
+    position: relative;
+    
+    .dropcontent {
+        position: absolute;
+        background-color: var(--backgroundcolor);
+        right: 0px;
+        padding: 10px;
+        border-radius: 0 0 0 15px;
+        text-align: left;
+    }
+}
+
+/* FINAL DO HEADER*/
+
+.maincontent {
+    display: flex;
+    width: 1000px;
+    gap: 20px;
+    color: var(--whitecolor);
+    margin-top: 60px;
+
+    & .mark {
+        color: var(--primarycolor);
+    }
+
+    & .maintext {
+        & h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        & p {
+            color: var(--textcolor);
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            margin-top: 32px;
+        }
+        & button {
+            background: none;
+            border: var(--primarycolor) 1px solid;
+            padding: 10px 15px;
+            color: var(--whitecolor);
+            margin-top: 24px;
+        }
+    }
+
+
+
+    & .mainimg {
+
+        & .overlay  {
+            position: relative;
+    
+            & #logo-outline {
+                position: absolute;
+                right: 300px;
+                top: 90px;
+                width: 150px;
+                z-index: -1;
+                opacity: 50%;
+            }
+    
+            & #person {
+                position: relative;
+                width: 450px;
+                top: 3px;
+            }
+    
+            & #dots {
+                position: absolute;
+                right: 10px;
+                top: 250px;
+                width: 80px;
+                z-index: 1;
+            }
+    
+        }
+
+        & .current {
+            display: inline-flex;
+            margin: 0px;
+            gap: 10px;
+            padding: 10px;
+            margin-left: 17px;
+            width: 400px;
+            color: var(--textcolor);
+            border: var(--textcolor) 1px solid;
+            
+            & svg, rect {
+                width: 16px;
+                height: 16px;
+                fill: var(--primarycolor);
+            }
+        }
+    }
+}
