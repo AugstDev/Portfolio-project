@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Fira Code", monospace;
 }
 body {
     background-color: var(--backgroundcolor);
@@ -21,8 +22,6 @@ body {
 
 
 .header {
-
-    font-family: "Fira Code", monospace;
     background-color: var(--backgroundcolor);
     display: inline-flex;
     width: 1000px;
@@ -117,7 +116,7 @@ body {
             & #person {
                 position: relative;
                 width: 450px;
-                top: 3px;
+                top: 5px;
             }
     
             & #dots {
@@ -180,12 +179,70 @@ body {
         }
 
         & .line {
-            width: 750px;
+            width: 600px;
             height: 1px;
             background-color: var(--primarycolor);
         }
         & :last-child{
             margin-left: auto;
+        }
+    }
+
+
+    & .card-roll {
+        margin-top: 30px;
+        display: grid;
+        grid-template-rows: repeat(3, 330px);
+        grid-template-columns: repeat(3, auto);
+        gap: 16px;
+
+        & .card{
+            width: 330px;
+            outline: var(--whitecolor) 1px solid;
+            height: fit-content;
+            & img {
+                width: 330px;
+            }
+
+            & .lang-card{
+                margin-top: -5px;
+                padding: 10px;
+                color: var(--textcolor);
+                outline: var(--whitecolor) 1px solid;
+            }
+
+            & .title-card{
+                padding: 15px;
+
+                & h3{
+                    color: var(--whitecolor);
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+
+                & p{
+                    color: var(--textcolor);
+                    font-size: 1rem;
+                    padding: 10px 0px;
+                }
+
+                & .buttons{
+
+                    & button {
+                        font-weight: 500;
+                        background: none;
+                        border: var(--textcolor) 1px solid;
+                        padding: 10px 10px;
+                        color: var(--textcolor);
+                    }
+
+                    & button:first-child {
+                        border: var(--primarycolor) 1px solid;
+                        padding: 10px 10px;
+                        color: var(--whitecolor);
+                    }
+                }
+            }
         }
     }
 
